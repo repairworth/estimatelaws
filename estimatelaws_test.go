@@ -66,7 +66,7 @@ func TestAll(t *testing.T) {
 			t.Errorf("%s: unknown status %q", l.Code, l.Status)
 		}
 	}
-	want := map[Status]int{Verified: 33, NoStatuteFound: 2, Lead: 16}
+	want := map[Status]int{Verified: 40, NoStatuteFound: 4, Lead: 7}
 	for status, n := range want {
 		if count[status] != n {
 			t.Errorf("%d %s records, want %d", count[status], status, n)
@@ -111,5 +111,5 @@ func ExampleLookup() {
 func ExampleAll() {
 	fmt.Println(len(All()), "jurisdictions, release", Version)
 	// Output:
-	// 51 jurisdictions, release 2026-09-30
+	// 51 jurisdictions, release 2026-10-02
 }

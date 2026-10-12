@@ -1,6 +1,6 @@
 # estimatelaws
 
-Go package that embeds the dataset "U.S. State Auto Repair Estimate Laws": one record per U.S. state and the District of Columbia (51 rows), release 2026-09-30. No dependency outside the standard library.
+Go package that embeds the dataset "U.S. State Auto Repair Estimate Laws": one record per U.S. state and the District of Columbia (51 rows), release 2026-10-02. No dependency outside the standard library.
 
 **Not legal advice. Verify the official text.** This dataset summarizes public legal texts for research and consumer information. Laws change, and a short summary can miss exceptions. Read the official text, or ask a lawyer, before relying on any row.
 
@@ -25,9 +25,9 @@ fmt.Println(estimatelaws.Version)
 
 | Status | Meaning | Rows |
 |---|---|---|
-| `verified` | The official text was read and the row names a statute or rule. Rule values come from that text. | 33 |
-| `no_statute_found` | An official source was read on the date given and no dedicated statute was found (`official_url`, `checked_on`). This is a negative finding: it cannot be proven by quotation. Rule cells are empty. | 2 |
-| `lead` | The official text was not read; any citation or reference kept in the record is a pointer to follow up, and the rule fields are empty. | 16 |
+| `verified` | The official text was read and the row names a statute or rule. Rule values come from that text. | 40 |
+| `no_statute_found` | An official source was read on the date given and no dedicated statute was found (`official_url`, `checked_on`). This is a negative finding: it cannot be proven by quotation. Rule cells are empty. | 4 |
+| `lead` | The official text was not read; any citation or reference kept in the record is a pointer to follow up, and the rule fields are empty. | 7 |
 
 An empty field means "not established from the source read". It does not mean "no rule". Only `verified` rows carry rule values.
 

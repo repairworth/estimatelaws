@@ -37,7 +37,7 @@ import (
 
 // Version is the release date of the embedded dataset: the most recent
 // CheckedOn date found in it.
-const Version = "2026-09-30"
+const Version = "2026-10-02"
 
 //go:embed data/us-state-auto-repair-estimate-laws.csv
 var rawCSV []byte
